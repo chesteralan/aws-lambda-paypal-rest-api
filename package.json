@@ -1,0 +1,23 @@
+{
+  "name": "replaced-by-user-input",
+  "description": "replaced-by-user-input",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.109",
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "save-card": "sam local invoke -e events/save-card.json",
+    "save-paypal": "sam local invoke -e events/save-paypal.json",
+    "invoke": "yarn build && yarn save-paypal && yarn save-card",
+    "auth": "yarn build && sam local invoke authLambdaFunction"
+  }
+}

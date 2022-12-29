@@ -1,0 +1,31 @@
+{
+    "intent": "CAPTURE",
+    "payment_source": {
+        "card": {
+            "number": "4111111111111111",
+            "expiry": "2024-02",
+            "name": "John Doe",
+            "billing_address": {
+                "address_line_1": "2211 N First Street",
+                "address_line_2": "Building 17",
+                "admin_area_2": "San Jose",
+                "admin_area_1": "CA",
+                "postal_code": "95131",
+                "country_code": "US"
+            },
+            "attributes": {
+                "vault": {
+                    "store_in_vault": "ON_SUCCESS"
+                }
+            }
+        }
+    },
+    "purchase_units": [
+        {
+            "amount": {
+                "currency_code": "USD",
+                "value": "101.00"
+            }
+        }
+    ]
+}

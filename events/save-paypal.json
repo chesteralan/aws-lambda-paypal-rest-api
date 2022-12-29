@@ -1,0 +1,23 @@
+{
+    "intent": "CAPTURE",
+        "payment_source": {
+        "paypal": {
+          "attributes": {
+            "vault": {
+              "store_in_vault": "ON_SUCCESS",
+              "usage_type": "MERCHANT"
+            }
+          }
+        }
+      },
+      "application_context": {
+        "return_url": "https://example.com/returnUrl",
+        "cancel_url": "https://example.com/cancelUrl"
+      },
+      "purchase_units": [{
+        "amount": {
+          "currency_code": "USD",
+          "value": "100.00"
+        }
+      }]
+}
